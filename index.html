@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elias Elzaurdin - Portafolio</title>
+    <!-- Incluye Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://vorillaz.github.io/devicons/">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Epilogue:ital,wght@0,100..900;1,100..900&family=League+Gothic&family=Roboto:ital,wght@0,100..900;1,100..900&family=Staatliches&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css\styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Orbitron:wght@400..900&family=Permanent+Marker&family=Rock+Salt&family=Staatliches&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="main-cortina"></div>
+        <header class="header">
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#about-me" class="nav-link">Acerca de mí</a></li>
+                    <li><a href="#education" class="nav-link">Estudios</a></li>
+                    <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                    <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                    <li><a href="#contact" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="about" class="hero-section">
+                <img src="static\images\fondo.jpg" 
+         alt="fondo" 
+         style="position: absolute; top: 0; left: 0; width: 100%; height: 80%; object-fit: cover; z-index: -1;">
+				<div class="hero-text">
+				    <h2 class="hero-title">Elias Elzaurdin</h2>
+                    <h1 class="hero-subtitle">Desarrollador Web</h1>
+                    <a href="#" class="btn btn-primary hero-btn">Contáctame</a>
+				</div>
+	            <img id="profilePic" src="static\images\banner.png" alt="Elias Elzaurdin">
+
+				<div class="profile-pic-container">
+                </div>
+            </section>
+			<div class="fondo">
+			    <div class="tech-background">
+                    <div class="grid-dots"></div>
+                    <div class="connection-lines" id="lines"></div>
+                    <div class="particles" id="particles"></div>
+                    <div class="scan-line"></div>
+                    <div class="hexagons" id="hexagons"></div>
+                </div>
+			<section id="about-me" class="about-section section">
+			    <div class="about-pic-container">
+				    <img id="aboutPic" src="static\images\about.png" alt="Imagen de computadora con fragmento de codigo">
+				</div>
+				<div class="text-about">
+				    <h3 class="about-title" id="about-title">Acerca de mi</h3>
+				    <h1 class="about-subtitle">Soy  </br>Desarrollador Web</h1>
+				    <p class="about-description">
+                        Ingeniero en Ciencias Informáticas con experiencia en servicios
+ telemáticos, redes de computadoras y desarrollo web en WordPress.
+ Destaco por mi capacidad de comunicación clara, redacción y trabajo
+ en equipo. Habilidad para implementar soluciones tecnológicas
+ eficientes, combinando conocimientos técnicos y colaboración efectiva. Explora mi trabajo y conecta conmigo.
+                    </p>
+				</div>
+				
+            </section>
+			<section id="education" class="section-education section">
+			    <h3 class="section-title">Estudios</h3>
+				<div class=education-content>
+				    <div class="education-pic-container">
+				        <img id="educationPic" src="static\images\estudio.jpg" alt="Imagen de computadora con fragmento de codigo">
+				    </div>	
+                    <div class="timeline-container">
+                        <ul class="timeline">
+                            <li>
+                                <div class="content">
+                                    <h3>2017-2023</h3>
+                                    <p> Ingeniería en Ciencias Informáticas</p>
+                                </div>
+                                <div class="blinker"></div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3>2023</h3>
+                                    <p> Posgrado "Fundamentos de la Ciberseguridad"</p>
+                                </div>
+                                <div class="blinker"></div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3>2024</h3>
+                                    <p>Curso de Redactor.</p>
+                                </div>
+                                <div class="blinker"></div>
+                            </li>
+                            <li>
+                                <div class="content">
+                                    <h3>2025</h3>
+                                    <p> Curso de Diseño Web en WordPress</p>
+                                </div>
+                                <div class="blinker"></div>
+                            </li>
+                        </ul>
+                    </div>			
+				</div>
+			</section>
+            <section id="skills" class="section">
+                <h3 class="section-title">Habilidades</h3>
+                <div class="skills-container">
+                    <div class="skills-carousel">
+                        <!-- Items originales -->
+                        <div class="skill-item"><i class="fab fa-wordpress"></i><span>WordPress</span></div>
+                        <div class="skill-item"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+                        <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                        <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+                        <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
+                        <div class="skill-item"><i class="fas fa-code"></i><span>Django</span></div>
+                        <!-- Items duplicados para el bucle infinito -->
+                        <div class="skill-item"><i class="fab fa-wordpress"></i><span>WordPress</span></div>
+                        <div class="skill-item"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+                        <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                        <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+                        <div class="skill-item"><i class="fab fa-python"></i><span>Phyton</span></div>
+                        <div class="skill-item"><i class="fas fa-code"></i><span>Django</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <h3 class="section-title">Proyectos</h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h4>PrimeWillCall</h4>
+                        <p>Descripción breve del proyecto. Explica su propósito, las tecnologías utilizadas y tu rol en su desarrollo.</p>
+                        <div class="project-links">
+                            <a href="https://primewillcall.com/" class="btn btn-primary">Ver Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h4>Proyecto 2</h4>
+                        <p>Descripción breve del proyecto. Explica su propósito, las tecnologías utilizadas y tu rol en su desarrollo.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary">Ver Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h4>Proyecto 3</h4>
+                        <p>Descripción breve del proyecto. Explica su propósito, las tecnologías utilizadas y tu rol en su desarrollo.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary">Ver Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contact-section section">
+                <h3 class="section-title">Contacto</h3>
+                <p class="contact-text">
+                    Puedes encontrarme en mis redes sociales o enviarme un correo electrónico. ¡Me encantaría saber de ti!
+                </p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:ernesto.elzaurdin@email.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </section>
+        </main>
+		<footer class="footer">
+            <p>&copy; 2025 Elias Elzaurdin. Todos los derechos reservados.</p>
+    </footer>
+    </div>
+    
+	</div>
+    <script src="js\script.js"></script>
+</body>
+</html>

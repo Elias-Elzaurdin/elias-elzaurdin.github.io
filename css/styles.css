@@ -1,0 +1,579 @@
+
+/* Importación de Fuentes y Reseteo Básico */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+}
+		:root {
+            --color-bg: #f7fafc;
+            --color-text-primary: #f7fafc;
+            --color-text-secondary: #efefef;
+            --color-text-headings: #2af598;
+            --color-white: #efefef;
+            --color-accent: #2d3748;
+            --color-accent-hover: #1a202c;
+            --color-button-secondary-bg: #e2e8f0;
+            --color-button-secondary-bg-hover: #cbd5e0;
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+			background-color: #1f1f1f;
+			color: #efefef;
+            margin: 0;
+			
+        }
+		
+		body h1,h2,h3,h4,h5,a{
+		    font-family: "Orbitron", sans-serif;
+            font-style: normal;
+			font-size: 14px;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+		}
+
+        /* Contenedor Principal */
+        .main-container {
+            max-width: 100%; /* Equivalente a container de Tailwind */
+            margin-left: auto;
+            margin-right: auto;
+            background: rgba(0, 0, 0, 0.6); /* Cortina negra al 60% */
+            z-index: 1;
+        }
+
+        /* Encabezado y Navegación */
+        .header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+			padding-top: 1rem;
+        }
+        .nav-list {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 1rem;
+            font-size: 1.125rem;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: var(--color-text-headings);
+        }
+        /* Sección General */
+        .section {	
+			padding: 3rem 5rem;
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--color-text-headings);
+        }
+
+        /* Sección Hero */
+		.hero-text {
+		    text-align: left;
+			align-self: center;
+		}
+		.hero-btn {
+		    margin-top: 1.5rem;
+		}
+        .hero-section {
+		    display: grid;
+            text-align: center;
+			grid-template-columns: 1fr 1fr;
+			justify-items: center;
+			padding: 0 10rem;
+		}
+		
+        /*.profile-pic-container {
+		    align-self: center;
+            position: relative;
+            width: 15rem;
+            height: 15rem;
+            margin: 0 auto 0 auto;
+            border-radius: 9999px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }*/
+        #profilePic {
+		    position: relative;
+            width: 22rem;
+            object-fit: contain;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #2af598;        
+            margin-bottom: .5rem;
+			margin-top: 1rem;
+        }
+        .hero-subtitle {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #f7fafc;
+            margin-bottom: 1rem;
+			margin-top: .5rem;
+        }
+        .about-description {
+            font-size: 1rem;
+            max-width: 30rem;  			
+            color: var(--color-text-secondary);
+		}
+		.about-section {    
+		    display: flex;
+            flex-direction: row;
+            padding-top: 3rem;
+            align-items: center;
+            justify-content: center;
+        }
+		.about-pic-container {
+		    position: relative;
+		    height: 25rem;
+			margin-left: initial;
+			border-radius: 20px;
+			border: 2px inset #2af598;
+            box-shadow: 5px 5px 50px rgba(42, 245, 152, 0.2);
+			margin-right: 5rem;
+			overflow:hidden;
+		}
+		#aboutPic {
+		    position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+		}
+		.about-subtitle {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--color-text-headings);
+            margin-bottom: 1rem;
+			margin-top: .5rem;
+        }
+		.about-title {
+		    align-self: top;
+		}
+
+        /* Carrusel de Habilidades */
+        .skills-container {
+            position: relative;
+            max-width: 56rem;
+            margin: 0 auto;
+            overflow: hidden;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .skills-carousel {
+            display: flex;
+            width: fit-content;
+            animation: scroll-left 25s linear infinite;
+        }
+        @keyframes scroll-left {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+        .skill-item {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            margin: 0 0.75rem;
+            width: 150px;
+        }
+        .skill-item i {
+            font-size: 3rem;
+            color: #f7fafc;
+            margin-bottom: 0.5rem;
+        }
+        .skill-item span {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #f7fafc;
+        }
+
+        /* Sección de Proyectos */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 2rem;
+        }
+        .project-card {
+            background-color: #171717;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-lg);
+            transition: box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            box-shadow: 5px 5px 30px rgba(42, 245, 152, 0.3);
+        }
+        .project-card h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: var(--color-text-headings);
+        }
+        .project-card p {
+            color: var(--color-text-secondary);
+            margin-bottom: 1rem;
+        }
+        .project-links {
+            display: flex;
+            gap: 1rem;
+			justify-content: right;
+        }
+        .btn {
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: transparent;
+            color: #00ff88;
+            border: 2px solid #00ff88;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary:hover {
+		    background: #00ff88;
+            color: #0a0a1a;
+            box-shadow: 0 0 20px #00ff88;
+        }
+		.btn-primary:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-primary:hover:before {
+            left: 100%;
+        }
+        .btn-secondary {
+            background-color: var(--color-button-secondary-bg);
+            color: var(--color-text-primary);
+        }
+        .btn-secondary:hover {
+            background-color: var(--color-button-secondary-bg-hover);
+        }
+
+        /* Sección de Contacto */
+        .contact-section {
+            text-align: center;
+        }
+        .contact-text {
+            font-size: 1.25rem;
+            max-width: 42rem;
+            margin: 0 auto 2rem auto;
+            color: var(--color-text-secondary);
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 1.875rem;
+        }
+        .social-icons a {
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: var(--color-text-headings);
+        }
+
+        /* Pie de página */
+        .footer {
+            text-align: center;
+            color: #a0aec0; /* gray-500 */	
+		    padding-bottom: 1rem;
+        }
+        
+        /* Media Queries para Responsividad */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: row;
+            }
+            .hero-subtitle {
+                margin-bottom: 0;
+            }
+			
+        }
+		        
+        @media (min-width: 768px) {
+            .nav-list {
+                gap: 2rem;
+            }
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+		/* Linea del tiempo */
+		/* Contenedor principal de la línea de tiempo */
+		#education {
+		    border: 2px inset #2af598;
+            box-shadow: 5px 5px 50px rgba(42, 245, 152, 0.3);
+			border-radius: 20px;
+			margin: 5rem auto;
+			background-color: #171717;
+			max-width: 1024px;
+            max-height: 600px;
+		}
+		.education-content {
+		    display: flex;
+			align-items: center;
+		}
+	    .education-pic-container {
+		    position: relative;
+		    width: 45rem;
+			height: 25rem;
+			margin-right: 10rem;
+		}
+		#educationPic {
+		    position: relative;
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+			border-radius: 20px;
+			border: 2px inset #2af598;
+			box-shadow: 5px 5px 50px rgba(42, 245, 152, 0.3);
+		}
+        .timeline-container {
+            max-width: 800px;
+            width: 90%;
+            position: relative;
+			
+        }
+
+        /* La línea de tiempo en sí */
+        .timeline {
+            list-style-type: none;
+            position: relative;
+            padding: 0;
+        }
+
+        /* La línea vertical, ahora estática y con un color base un poco más intenso */
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 100px;
+            width: 2px; /* La línea es gruesa */
+            background-color: rgba(42, 245, 152, 0.3); /* Un color de base naranja ligeramente más visible */
+            box-shadow: 0 0 5px 2px rgba(42, 245, 152, 0.2); /* Sombra difuminada un poco más intensa */
+            z-index: 5;
+        }
+
+        /* Estilos para cada punto de la línea de tiempo */
+        .timeline li {
+            position: relative;
+            margin-bottom: 3.5rem;
+            min-height: 50px;
+        }
+
+        /* Contenido de cada evento (sin recuadro) */
+        .timeline li .content {
+            position: relative;
+            left: 140px;
+            width: calc(100% - 140px);
+        }
+        
+        .timeline li .content h3 {
+            margin: 0 0 0.5rem 0;
+            text-shadow: 0 0 5px #2af598, 0 0 10px #2af598;
+        }
+
+        .timeline li .content p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* El punto del hito que parpadea como una "estrella de fuego" */
+        .blinker {
+            position: absolute;
+            top: 50%;
+            left: 100px;
+            width: 0;
+            height: 0;
+            background-color: #fff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            /* Múltiples capas de sombra para un efecto de estrella de fuego */
+            box-shadow: 
+                0 0 5px 2px rgba(255, 255, 255, 0.8),
+                0 0 10px 4px #2af598,
+                0 0 20px 8px #29F533,
+                0 0 30px 12px #85F529;
+            z-index: 10;
+            animation: twinkle 1.5s infinite alternate ease-in-out;
+        }
+        
+        /* Animación de parpadeo (solo para las estrellas) */
+        @keyframes twinkle {
+            0% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            100% {
+                opacity: 0.4;
+                transform: translate(-50%, -50%) scale(0.9);
+            }
+        }
+		
+		/*Fondo de pagina*/
+		 .tech-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        /* Grid de puntos tecnológico */
+        .grid-dots {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle, #00ff88 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+            animation: gridMove 20s infinite linear;
+        }
+
+        @keyframes gridMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
+        }
+
+        /* Líneas de conexión */
+        .connection-lines {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .line {
+            position: absolute;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            height: 1px;
+            animation: lineFlow 3s infinite linear;
+        }
+
+        @keyframes lineFlow {
+            0% { opacity: 0; transform: translateX(-100%); }
+            50% { opacity: 0.6; }
+            100% { opacity: 0; transform: translateX(100%); }
+        }
+
+        /* Partículas flotantes */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .particle {
+            position: absolute;
+            background: #00ff88;
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
+            50% { transform: translateY(-20px) scale(1.2); opacity: 0.8; }
+        }
+
+        /* Efecto de escaneo */
+        .scan-line {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ff88, transparent);
+            opacity: 0;
+            animation: scan 4s infinite linear;
+        }
+
+        @keyframes scan {
+            0% { top: 0%; opacity: 0; }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.8; }
+            100% { top: 100%; opacity: 0; }
+        }
+
+        /* Hexágonos tecnológicos */
+        .hexagons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+        }
+
+        .hexagon {
+            position: absolute;
+            width: 60px;
+            height: 34px;
+            background: #00ff88;
+            animation: hexPulse 8s infinite ease-in-out;
+        }
+
+        .hexagon:before,
+        .hexagon:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+        }
+
+        .hexagon:before {
+            bottom: 100%;
+            border-bottom: 17px solid #00ff88;
+        }
+
+        .hexagon:after {
+            top: 100%;
+            border-top: 17px solid #00ff88;
+        }
+
+        @keyframes hexPulse {
+            0%, 100% { opacity: 0.1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(1.1); }
+        }
