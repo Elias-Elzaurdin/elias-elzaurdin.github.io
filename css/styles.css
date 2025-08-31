@@ -316,7 +316,7 @@
         }
         
         /* Media Queries para Responsividad */
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             .header {
                 flex-direction: row;
             }
@@ -606,3 +606,4 @@
             50% { opacity: 0.3; transform: scale(1.1); }
 
         }
+
