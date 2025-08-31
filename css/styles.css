@@ -352,6 +352,9 @@
             opacity: 0;
             transition: opacity 1s ease;
             }
+			.education-pic-container{
+				display: none;
+			}
         }
 		        
         @media (min-width: 768px) {
@@ -606,5 +609,6 @@
             50% { opacity: 0.3; transform: scale(1.1); }
 
         }
+
 
 
