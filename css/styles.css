@@ -318,14 +318,18 @@
         /* Media Queries para Responsividad */
         @media (max-width: 768px) {
             .header {
-                flex-direction: row;
+                flex-direction: row; 
             }
+			.nav-list {
+				padding: 0 3.5rem;
+			}
             .hero-subtitle {
                 margin-bottom: 0;
             }
 			.hero-section{
 				display: flex;
 				flex-direction: column;
+				
 			}
 			.profile-pic-container {
 		    align-self: center;
@@ -342,7 +346,7 @@
 			.hero-text {
 		    text-align: left;
 			align-self: center;
-			margin: auto;
+			
 		    }
 			#profilePic {
 		    position: absolute;
@@ -352,8 +356,15 @@
             opacity: 0;
             transition: opacity 1s ease;
             }
-			.education-pic-container{
-				display: none;
+			.education-pic-container {
+		    display:none;
+			}
+			.main-container{
+				max-width: 768px;
+			}
+			.timeline li {
+				margin-bottom: 1rem;
+				min-height: 50px;
 			}
         }
 		        
@@ -431,7 +442,7 @@
         /* Estilos para cada punto de la línea de tiempo */
         .timeline li {
             position: relative;
-            margin-bottom: 3.5rem;
+            margin-bottom: 2.5rem;
             min-height: 50px;
         }
 
@@ -607,8 +618,4 @@
         @keyframes hexPulse {
             0%, 100% { opacity: 0.1; transform: scale(1); }
             50% { opacity: 0.3; transform: scale(1.1); }
-
         }
-
-
-
