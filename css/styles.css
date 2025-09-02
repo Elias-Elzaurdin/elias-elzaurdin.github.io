@@ -418,6 +418,9 @@
 			.education-pic-container {
 		        display: none;
 			}
+			.about-pic-container {
+		        display:none;
+		    }
 			.main-container{
 				max-width: 768px;
 			}
@@ -675,4 +678,5 @@
         @keyframes hexPulse {
             0%, 100% { opacity: 0.1; transform: scale(1); }
             50% { opacity: 0.3; transform: scale(1.1); }
+
         }
