@@ -67,7 +67,7 @@
             display: none;
             cursor: pointer;
         }
-		span {
+		.span-toggle {
             display: block;
             width: 25px;
             height: 3px;
@@ -397,7 +397,7 @@
 			justify-content: center;
             width: 15rem;
             height: 15rem;
-            margin:  2rem auto auto auto;
+            padding: 3rem 0;
             border-radius: 9999px;
             overflow: hidden;
             box-shadow: var(--shadow-lg);
@@ -409,9 +409,8 @@
 		    }
 			#profilePic {
 		    position: absolute;
-            width: 100%;
-			height: auto;
-            object-fit: cover;
+			height: 100%;
+            object-fit: contain;
             opacity: 0;
             transition: opacity 1s ease;
             }
@@ -419,7 +418,7 @@
 		        display: none;
 			}
 			.about-pic-container {
-		        display:none;
+		    display:none;
 		    }
 			.main-container{
 				max-width: 768px;
@@ -450,8 +449,7 @@
 			border-radius: 20px;
 			margin: 5rem auto;
 			background-color: #171717;
-			max-width: 1024px;
-            max-height: 600px;
+            max-height: 100%;
 		}
 		.education-content {
 		    display: flex;
@@ -678,5 +676,4 @@
         @keyframes hexPulse {
             0%, 100% { opacity: 0.1; transform: scale(1); }
             50% { opacity: 0.3; transform: scale(1.1); }
-
         }
