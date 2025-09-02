@@ -57,4 +57,24 @@ const profilePic = document.getElementById('profilePic');
             createParticles();
             createHexagons();
         });
-		
+		// Toggle del menú hamburguesa
+        const hamburger = document.querySelector(".menu-toggle");
+        const navMenu = document.querySelector(".nav-list");
+
+        hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        });
+
+// Cerrar el menú al hacer clic en un enlace
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+        }));
+		// Cerrar menú al hacer scroll (en móviles)
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth <= 768) {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+            }
+        });

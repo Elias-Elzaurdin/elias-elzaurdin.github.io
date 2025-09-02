@@ -54,6 +54,7 @@
             margin-bottom: 2rem;
 			padding-top: 1rem;
         }
+
         .nav-list {
             display: flex;
             list-style: none;
@@ -61,6 +62,18 @@
             margin: 0;
             gap: 1rem;
             font-size: 1.125rem;
+		}
+		.menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+		span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: white;
+            transition: all .3s ease;
         }
         .nav-link {
             text-decoration: none;
@@ -314,26 +327,61 @@
             color: #a0aec0; /* gray-500 */	
 		    padding-bottom: 1rem;
         }
+		/* Menú de navegación */
+        
         
         /* Media Queries para Responsividad */
         @media (max-width: 768px) {
-			* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-			}
-			body{
-			margin: 0;
-            padding: 0;
-			max-width:768px;
-			}
             .header {
                 flex-direction: row;
 				margin: 0;
                 padding: 0;
 				max-width: 100%;
+				justify-content: end;
             }
-			
+			.menu-toggle{
+				display:block;
+                z-index: 5;	
+                margin: 20px;				
+			}
+
+			.menu-toggle.active span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+				box-shadow: 5px 5px 30px rgba(42, 245, 152, 1);
+				background-color:#2af598;
+            }
+
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+				box-shadow: 5px 5px 30px rgba(42, 245, 152, 1);
+				background-color:#2af598;
+            }
+
+            .menu-toggle.active span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+				box-shadow: 5px 5px 30px rgba(42, 245, 152, 1);
+				background-color:#2af598;
+            }
+			.nav-list{
+			    position: absolute;
+                left: 0;
+                top: -100%;
+                flex-direction: column;
+                background-color: rgba(0,0,0,0.8);
+                width: 100%;
+                text-align: center;
+                transition: .5s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.6);
+                padding: 20px 0;
+                gap: 10px;
+				z-index: 5;
+            }
+			.nav-list.active{
+				top: 0;
+			}
+			.nav-link:hover{
+				display:block;
+			}
             .hero-subtitle {
                 margin-bottom: 0;
             }
@@ -368,7 +416,7 @@
             transition: opacity 1s ease;
             }
 			.education-pic-container {
-		    display:none;
+		        display: none;
 			}
 			.main-container{
 				max-width: 768px;
